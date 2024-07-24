@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WT-3083P</title>
+    <!--Bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!--fontawesome-cdn-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!--Navbar Sect-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container px-5">
+        <a class="navbar-brand" href="index.html"
+          ><i class="fa-solid fa-paw"></i> &nbsp; Paws & Claws Realty</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Page content-->
+    <section class="py-5">
+      <div class="container px-5">
+        <!--Contact form-->
+        <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
+          <div class="text-center mb-5">
+            <div
+              class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
+            >
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <h1 class="fw-bolder">Get in touch</h1>
+            <p class="lead fw-normal text-muted mb-0">
+              We'd love to hear from you
+            </p>
+          </div>
+          <div class="row gx-5 justify-content-center">
+            <div class="col-lg-8 col-xl-6">
+              <form id="contactForm" data-sb-form-api-token="API-TOKEN">
+                <!--Name input-->
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="name"
+                    type="text"
+                    placeholder="Enter your name"
+                    data-sb-validations="required"
+                    data-sb-can-submit="no"
+                  />
+                  <label for="name">Full name</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="name:required"
+                  >
+                    A name is required
+                  </div>
+                </div>
+                <!--Email address input-->
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="email"
+                    type="email"
+                    placeholder="name@example.com"
+                    data-sb-validations="required,email"
+                    data-sb-can-submit="no"
+                  />
+                  <label for="email">Email address</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="email:required"
+                  >
+                    An email is required.
+                  </div>
+                  <div class="invalid-feedback" data-sb-feedback="email:email">
+                    Email is not valid
+                  </div>
+                </div>
+                <!--Phone number input-->
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="phone"
+                    type="tel"
+                    placeholder="(123) 456-7890"
+                    data-sb-validations="required"
+                    data-sb-can-submit="no"
+                  />
+                  <label for="phone">Phone number</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="phone:required"
+                  >
+                    A phone number is required
+                  </div>
+                </div>
+                <!--Message input-->
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    type="text"
+                    placeholder="Enter your message here..."
+                    style="height: 10rem"
+                    data-sb-validations="required"
+                    data-sb-can-submit="no"
+                  ></textarea>
+                  <label for="message">Message</label>
+                  <div
+                    class="invalid-feedback"
+                    data-sb-feedback="message:required"
+                  >
+                    A message is required
+                  </div>
+                </div>
+                <!--Submit success message-->
+                <div class="d-none" id="submitSuccessMessage">
+                  <div class="text-center mb-3">
+                    <div class="fw-bolder">Form submission successful!</div>
+                    " To activate this form, sign up at "
+                    <br />
+                    <a href="https://startbootstrap.com/solution/contact-forms"
+                      >https://startbootstrap.com/solution/contact-forms</a
+                    >
+                  </div>
+                </div>
+                <!--Submit error message-->
+                <div class="d-none" id="submitErrorMessage">
+                  <div class="text-center text-danger mb-3">
+                    Error sending message!
+                  </div>
+                </div>
+                <!--Submit button-->
+                <div class="d-grid">
+                  <button
+                    class="btn btn-primary btn-lg disabled"
+                    id="submitButton"
+                    type="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <!--Cantact Cards-->
+        <div class="row">
+          <div class="col">
+            <div
+              class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
+            >
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="h5 mb-2">Chat with us</div>
+            <p class="text-muted mb-0">
+              Or pet us :)
+            </p>
+          </div>
+          <div class="col">
+            <div
+              class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
+            >
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="h5 mb-2">Ask the Community</div>
+            <p class="text-muted mb-0">
+              Ask everyone we are the BEST!!!
+            </p>
+          </div>
+          <div class="col">
+            <div
+              class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
+            >
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="h5 mb-2">Support Center</div>
+            <p class="text-muted mb-0">
+              We are here to give you a paw for every need of yours!
+            </p>
+          </div>
+          <div class="col">
+            <div
+              class="feature bg-primary bg-gradient text-white rounded-3 mb-3"
+            >
+              <i class="fa-solid fa-house"></i>
+            </div>
+            <div class="h5 mb-2">Call Us</div>
+            <p class="text-muted mb-0">
+              Call us during paw business hours, at (555)444-3322
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-dark py-4 ms-auto">
+      <div class="container px-5">
+        <div
+          class="row align-items-center justify-content-between flex-column flex-sm-row"
+        >
+          <div class="col-auto">
+            <div class="small mb-0 text-white">
+              Copyright © Ezgi Tamyolcu 2024
+            </div>
+          </div>
+          <div class="col-auto">
+            <a class="link-light small" href="#!">Privacy</a>
+            <span class="text-white mx-1">.</span>
+            <a class="link-light small" href="#!">Terms</a>
+            <span class="text-white mx-1">.</span>
+            <a class="link-light small" href="#!">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
